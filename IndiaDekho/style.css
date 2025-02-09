@@ -1,0 +1,196 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles for body and page structure */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Global container for centering content */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header styles */
+.header {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.header .logo img {
+    height: 50px;
+    padding-left: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Main section styles for all pages */
+section {
+    padding: 50px 0;
+}
+
+/* Common styles for headings */
+h1, h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* About Us Section */
+.about-us p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Blog Section */
+.blog .blog-post {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.blog .blog-post h2 {
+    font-size: 24px;
+    color: #0056b3;
+}
+
+.blog .blog-post p {
+    font-size: 16px;
+    color: #555;
+}
+
+.blog .blog-post a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.blog .blog-post a:hover {
+    color: #0056b3;
+}
+
+/* Contact Us Section */
+.contact-us form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.contact-us input, .contact-us textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.contact-us button {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-us button:hover {
+    background-color: #003d80;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .social-links a, .footer .footer-links a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer .social-links a:hover, .footer .footer-links a:hover {
+    color: #ffd700;
+}
+
+/* Make sure form elements are consistent across all pages */
+input[type="text"], input[type="email"], textarea {
+    font-size: 16px;
+}
+
+/* Ensuring good spacing between sections */
+section {
+    padding: 50px 0;
+}
+
+@media (max-width: 768px) {
+    /* Responsive Design: Stacks elements on smaller screens */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .footer .social-links a, .footer .footer-links a {
+        display: inline-block;
+        margin: 10px;
+    }
+}

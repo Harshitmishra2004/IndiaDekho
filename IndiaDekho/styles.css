@@ -1,0 +1,207 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(45deg, #00c6ff, #0072ff, #00b3b3, #7a6aff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Background Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animated Border Stroke */
+@keyframes borderAnimation {
+    0% {
+        border-color: #00c6ff;
+        box-shadow: 0 0 30px 5px rgba(0, 198, 255, 0.5);
+    }
+    25% {
+        border-color: #0072ff;
+        box-shadow: 0 0 30px 5px rgba(0, 114, 255, 0.5);
+    }
+    50% {
+        border-color: #00b3b3;
+        box-shadow: 0 0 30px 5px rgba(0, 179, 179, 0.5);
+    }
+    75% {
+        border-color: #7a6aff;
+        box-shadow: 0 0 30px 5px rgba(122, 106, 255, 0.5);
+    }
+    100% {
+        border-color: #00c6ff;
+        box-shadow: 0 0 30px 5px rgba(0, 198, 255, 0.5);
+    }
+}
+
+/* Form container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border: 4px solid #00c6ff; /* Initial border */
+    animation: borderAnimation 15s ease infinite; /* Animated border */
+}
+
+.form-container:hover {
+    transform: scale(1.05);
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    width: 48%;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.tab-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Forms */
+.form-tab {
+    display: none;
+}
+
+.form-tab.active {
+    display: block;
+}
+
+/* Form Fields */
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Register/Login Link */
+.register-link {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .form-container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .tab-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
